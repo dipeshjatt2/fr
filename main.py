@@ -1,38 +1,7 @@
-Here's an example of how you can add infinite loops to the process in Python:
-
-```
-import time
 import requests
-
-def do_click(url):
-    try:
-        response = requests.get(url)
-        return response.status_code
-    except Exception as e:
-        print(f"Error: {e}")
-        return None
-
-url = '(link unavailable)'
-
-while True:
-    result = do_click(url)
-    print(f"Result: {result}")
-    time.sleep(1)  # wait 1 second before next request
-```
-
-This script will send a GET request to the specified URL every second, printing the response status code.
-
-*Important Notes:*
-
-1. Be cautious when using infinite loops, as they can consume system resources and potentially cause issues.
-2. Ensure you have permission to send repeated requests to the target URL.
-3. Respect rate limits and avoid overwhelming the server with requests.
-4. Consider implementing a break condition or timeout to prevent infinite looping.
-
-Would you like me to modify the script or provide further guidance?import requests
 from urllib.parse import urlparse, parse_qs
 import hashlib
-
+import time
 headers = {
     'accept': 'application/json, text/plain, */*',
     'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
@@ -69,10 +38,11 @@ def do_click(init):
 
 if __name__== '__main__':   
     #replace it with your own tgwebappdata
-    result = do_click('https://app.freedogs.bot/#tgWebAppData=query_id%3DAAEijwdXAgAAACKPB1fw7SvJ%26user%3D%257B%2522id%2522%253A5755080482%252C%2522first_name%2522%253A%2522As%25CA%2580%25E1%25B4%2580%25CA%2580%2522%252C%2522last_name%2522%253A%2522R%25E1%25B4%2580%25CA%259C%25E1%25B4%258D%25E1%25B4%2580%25C9%25B4%2522%252C%2522username%2522%253A%2522Mr_Noobboy%2522%252C%2522language_code%2522%253A%2522en%2522%252C%2522allows_write_to_pm%2522%253Atrue%257D%26auth_date%3D1729921889%26hash%3Dccd406ef8bd7fcdadfab9ac10bdreuh487a99ce6c3110cc616fc69c2666b1babd6f&tgWebAppVersion=7.10&tgWebAppPlatform=android&tgWebAppThemeParams=%7B%22bg_color%22%3A%22%231e1e1e%22%2C%22section_bg_color%22%3A%22%23181819%22%2C%22secondary_bg_color%22%3A%22%23000000%22%2C%22text_color%22%3A%22%23ffffff%22%2C%22hint_color%22%3A%22%237d7d7d%22%2C%22link_color%22%3A%22%2357a7e0%22%2C%22button_color%22%3A%22%2350a8eb%22%2C%22button_text_color%22%3A%22%23ffffff%22%2C%22header_bg_color%22%3A%22%23232326%22%2C%22accent_text_color%22%3A%22%2364b5ef%22%2C%22section_header_text_color%22%3A%22%236cb6f8%22%2C%22subtitle_text_color%22%3A%22%237e7e7f%22%2C%22destructive_text_color%22%3A%22%23ee686f%22%2C%22section_separator_color%22%3A%22%23000000%22%2C%22bottom_bar_bg_color%22%3A%22%23000000%22%7D')
+    result = do_click('https://app.freedogs.bot/#tgWebAppData=query_id%3DAAEO_is2AgAAAA7-KzZU9nCj%26user%3D%257B%2522id%2522%253A5203820046%252C%2522first_name%2522%253A%2522Ymx%2520haxor%2522%252C%2522last_name%2522%253A%2522%2522%252C%2522username%2522%253A%2522Ymxhaxor%2522%252C%2522language_code%2522%253A%2522en%2522%252C%2522allows_write_to_pm%2522%253Atrue%257D%26auth_date%3D1731290589%26hash%3D830adca22ed2d6b2c8f85a0eb23a90e417374a207f9e36fa38379a48113d4dee&tgWebAppVersion=7.10&tgWebAppPlatform=android&tgWebAppThemeParams=%7B%22bg_color%22%3A%22%23ffffff%22%2C%22section_bg_color%22%3A%22%23ffffff%22%2C%22secondary_bg_color%22%3A%22%23f0f0f0%22%2C%22text_color%22%3A%22%23222222%22%2C%22hint_color%22%3A%22%23a8a8a8%22%2C%22link_color%22%3A%22%232678b6%22%2C%22button_color%22%3A%22%2350a8eb%22%2C%22button_text_color%22%3A%22%23ffffff%22%2C%22header_bg_color%22%3A%22%23527da3%22%2C%22accent_text_color%22%3A%22%231c93e3%22%2C%22section_header_text_color%22%3A%22%233a95d5%22%2C%22subtitle_text_color%22%3A%22%2382868a%22%2C%22destructive_text_color%22%3A%22%23cc2929%22%2C%22section_separator_color%22%3A%22%23d9d9d9%22%2C%22bottom_bar_bg_color%22%3A%22%23f0f0f0%22%7D ')
     print(result)
 
 while True:
-    result = do_click(url)
-    print(f"Result: {result}")
-    time.sleep(1)  # wait 1 second before next request
+    result = do_click('https://app.freedogs.bot/#tgWebAppData=query_id%3DAAEO_is2AgAAAA7-KzZU9nCj%26user%3D%257B%2522id%2522%253A5203820046%252C%2522first_name%2522%253A%2522Ymx%2520haxor%2522%252C%2522last_name%2522%253A%2522%2522%252C%2522username%2522%253A%2522Ymxhaxor%2522%252C%2522language_code%2522%253A%2522en%2522%252C%2522allows_write_to_pm%2522%253Atrue%257D%26auth_date%3D1731290589%26hash%3D830adca22ed2d6b2c8f85a0eb23a90e417374a207f9e36fa38379a48113d4dee&tgWebAppVersion=7.10&tgWebAppPlatform=android&tgWebAppThemeParams=%7B%22bg_color%22%3A%22%23ffffff%22%2C%22section_bg_color%22%3A%22%23ffffff%22%2C%22secondary_bg_color%22%3A%22%23f0f0f0%22%2C%22text_color%22%3A%22%23222222%22%2C%22hint_color%22%3A%22%23a8a8a8%22%2C%22link_color%22%3A%22%232678b6%22%2C%22button_color%22%3A%22%2350a8eb%22%2C%22button_text_color%22%3A%22%23ffffff%22%2C%22header_bg_color%22%3A%22%23527da3%22%2C%22accent_text_color%22%3A%22%231c93e3%22%2C%22section_header_text_color%22%3A%22%233a95d5%22%2C%22subtitle_text_color%22%3A%22%2382868a%22%2C%22destructive_text_color%22%3A%22%23cc2929%22%2C%22section_separator_color%22%3A%22%23d9d9d9%22%2C%22bottom_bar_bg_color%22%3A%22%23f0f0f0%22%7D ')
+    print(result)
+    time.sleep(20)
+    
